@@ -53,7 +53,7 @@ async fn main() -> std::io::Result<()> {
             .service(Files::new("/", "./../style/output.css").show_files_listing())
             .service(Files::new("/", "./../static/images/").show_files_listing())
     })
-        .bind(("127.0.0.1", 8086))?
+        .bind(("0.0.0.0", 10000))?
         .run()
         .await
 }
