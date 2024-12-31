@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/images/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/images/icons/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/images/icons/apple-touch-icon.png">
+	<link rel="manifest" href="/static/images/icons/site.webmanifest">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+	<link data-trunk href="/style/output.css" rel="stylesheet">
+	<script src="https://unpkg.com/htmx.org@2.0.4"></script>
+
+	<title>Catchfire</title>
+</head>
+<body>
+<div class="flex-1">
+	<!-- Status bar -->
+	<div class="p-6 max-w-m mx-auto bg-neutral-100 shadow-lg flex items-center sticky top-0">
+		<div class="shrink-0 object-contain w-[8rem]">
+			<img class="ease-out duration-1000 size-28 hover:rotate-2" src="/static/images/CatchfireLight.png"></img>
+		</div>
+		<div class="max-w-m flex-1">
+			<div class="select-none text-3xl">Welcome to <span class="text-orange-400">Catchfire</span> Electronics</div>
+			<p class="select-none">Home of quality engineering</p>
+		</div>
+
+		<div class="justify-right flex gap-4 text-2xl">
+			<button class="shadow hover:shadow-md rounded-lg p-2 bg-neutral-200 ease-out duration-500 hover:bg-amber-300" hx-target="#body-content" hx-get="/home">Home</button>
+			<button class="shadow hover:shadow-md rounded-lg p-2 bg-neutral-200 ease-out duration-500 hover:bg-amber-300" hx-target="#body-content" hx-get="/keyboard">Keyboards</button>
+			<button class="shadow hover:shadow-md rounded-lg p-2 bg-neutral-200 ease-out duration-500 hover:bg-amber-300" hx-target="#body-content" hx-get="/radio">Ham Radio</button>
+			<button class="shadow hover:shadow-md rounded-lg p-2 bg-neutral-200 ease-out duration-500 hover:bg-amber-300" hx-target="#body-content" hx-get="/software">Software</button>
+			<button class="shadow hover:shadow-md rounded-lg p-2 bg-neutral-200 ease-out duration-500 hover:bg-amber-300" hx-target="#body-content" hx-get="/theory">Theory</button>
+		</div>
+	</div>
+
+	<!-- Body content that is changed by GET requests -->
+
+	<div id="body-content" hx-swap="innerHTML">
+	<div class="py-16 flex-1 space-y-10">
+		<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shapre-rendering="auto">
+		<defs>
+			<path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+		</defs>
+		<g class="parallax self-end">
+		<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(120,255,255,0.7)" />
+		<use xlink:href="#gentle-wave" x="88" y="7" fill="rgba(49,148,29,0.5)" />
+		<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,120,40,0.7)" />
+		<use xlink:href="#gentle-wave" x="88" y="7" fill="rgba(255,255,255,1)" />
+		</g>
+		</svg>
+
+		<h1 class="select-none text-center text-3xl h-32 align-text-bottom">Relax and hang out, or look around using the toolbar</h1>
+	</div>
+	</div>
+
+	<!-- Footer content -->
+</div>
+</body>
+</html>
