@@ -46,7 +46,7 @@
 /*Shrinking for mobile*/
 @media (max-width: 768px) {
   .waves {
-    height:200px;
-    min-height:200px;
+    height:500px;
+    min-height:500px;
   }
 }
