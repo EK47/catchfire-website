@@ -1,64 +1,78 @@
 <!-- Intro Section -->
-<div class="flex flex-col h-max bg-gradient-to-tl from-cyan-500 to-orange-500">
+<div class="flex flex-col h-auto bg-gradient-to-tl from-cyan-500 to-orange-500">
 	<!-- Header -->
 	<div class="sticky top-0 z-10 shadow-lg">
 		<div class="flex shrink-0 p-6 bg-white h-fit min-w-48 shadow-xl">
-			<div class="shadow-lg h-fit bg-fixed bg-contain rounded-lg border-orange-200 text-gray-100 text-3xl static p-1" style="background-image: url(/static/images/BurnboardBackground.jpg)">
+			<div class="shadow-lg h-fit bg-fixed bg-contain rounded-lg border-orange-200 text-gray-100 text-xl sm:text-3xl static p-1" style="background-image: url(/static/images/BurnboardBackground.jpg)">
 				<h1 class="hover:text-orange-500 transition-colors ease-in-out duration-800 select-none bg-black bg-blend-multiply p-1">Burnboard</h1>
 			</div>
-			<h1 class="select-none text-gray-700 text-3xl py-1.5 px-3 translate-y-0.5">:</h1>
-			<h1 class="shrink-0 select-none text-gray-700 text-3xl py-1.5 px-1 translate-y-0.5">Catchfire's Premiere Keyboard</h1>
+			<h1 class="select-none text-gray-700 text-lg sm:text-3xl py-1.5 px-3 translate-y-0.5">:</h1>
+			<h1 class="shrink-0 select-none text-gray-700 text-lg sm:text-3xl py-1.5 px-1 translate-y-0.5">Catchfire's Premiere Keyboard</h1>
 		</div>
 	</div>
 	<!-- Content -->
 	<div class="h-auto flex-1">
 		<img class="m-16 w-5/6 h-auto mx-auto -rotate-12 drop-shadow-lg object-fill rounded-full max-w-fit" src="/static/images/BurnboardPCB.png"></img>
-		<img class="m-16 w-auto h-auto mx-auto -translate-y-12 rotate-12 drop-shadow-lg object-fill rounded max-w-fit" src="/static/images/Keyboard.png"></img>
-		<img class="m-16 w-5/6 h-auto mx-auto translate-x-12 -translate-y-24 -rotate-12 drop-shadow-lg object-fill rounded-full max-w-fit" src="/static/images/Schematic.png"></img>
+		<img class="m-16 w-5/6 h-auto mx-auto -translate-y-12 rotate-12 drop-shadow-lg object-fill rounded max-w-fit" src="/static/images/Keyboard.png"></img>
+		<img class="m-16 w-5/6 h-auto mx-auto translate-x-6 -translate-y-24 -rotate-12 drop-shadow-lg object-fill rounded-full max-w-fit" src="/static/images/Schematic.png"></img>
 	</div>
 </div>
 <!-- Design Section -->
-<div class="flex flex-col h-screen bg-gradient-to-tl from-orange-500 to-cyan-500">
+<div class="flex flex-col h-auto bg-gradient-to-tl from-orange-500 to-cyan-500">
 	<!-- Header -->
 	<div class="sticky top-0 z-10 shadow-lg">
 		<div class="flex shrink-0 bg-white h-fit min-w-48 shadow-xl p-6">
-			<div class="shadow-lg h-fit bg-fixed bg-contain rounded-lg border-orange-200 text-gray-100 text-3xl static p-1" style="background-image: url(/static/images/BurnboardBackground.jpg)">
+			<div class="shadow-lg h-fit bg-fixed bg-contain rounded-lg border-orange-200 text-gray-100 text-lg sm:text-3xl static p-1" style="background-image: url(/static/images/BurnboardBackground.jpg)">
 				<h1 class="hover:text-orange-500 transition-colors ease-in-out duration-800 select-none bg-black bg-blend-multiply p-1">Burnboard</h1>
 			</div>
-			<h1 class="select-none text-gray-700 text-3xl py-1.5 px-3 translate-y-0.5">:</h1>
-			<h1 class="shrink-0 select-none text-gray-700 text-3xl py-1.5 px-1 translate-y-0.5">Design</h1>
+			<h1 class="select-none text-gray-700 text-lg sm:text-3xl py-1.5 px-3 translate-y-0.5">:</h1>
+			<h1 class="shrink-0 select-none text-gray-700 text-lg sm:text-3xl py-1.5 px-1 translate-y-0.5">Design</h1>
 		</div>
 	</div>
 	<!-- Content -->
 	<div class="flex-1">
 		<h1 class="text-white text-3xl m-6 font-bold">Overview</h1>
 		<div class="flex">
-			<p class="text-white ml-10 w-1/2 text-lg">The Burnboard was designed from the ground up with a few key features in mind. First,
-			the heart of the Burnboard is a WCH32V203G6U6 processor. This processor is
+			<p class="mb-10 text-white ml-10 w-1/2 text-lg">The Burnboard was designed from the ground up with a few key features in mind. First,
+			the heart of the Burnboard is a WCH <a target="_blank" rel="noopener noreferrer" class="underline text-[#f5b414] hover:text-yellow-400" href="https://wch-ic.com/products/CH32V203.html">CH32V203G6U6</a> processor. This processor is
 			an affordable processor operating under the RISC-V instruction set. RISC-V is an open ISA that is well-documented
 			and increasingly supported in a variety of applications. In an attempt to further open-source efforts, this processor
 			was selected.
 			</p>
-			<img class="p-2 mx-auto h-auto w-fit" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/RISC-V-logo.svg/330px-RISC-V-logo.svg.png" />
+			<img class="p-2 mx-auto translate-x-24 h-auto max-h-[8rem] w-fit aspect-video" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/RISC-V-logo.svg/330px-RISC-V-logo.svg.png" />
+			<img class="p-2 mx-auto -translate-x-48 translate-y-24 h-auto max-h-[8rem] w-fit aspect-square" src="/static/images/cuddlyferris.svg"/>
 		</div>
 		<div>
-			<p class="text-white ml-10 w-1/2 text-lg">Another core tenent of the Burnboard's design is the use of embedded Rust for the custom
-			firmware. The project exists as a sort of 'full-stack' work, from the hardware to the user design. The existence of the ch32-hal crate
-			greatly facilitated this decision, as overloading the difficulty of this project with such in-depth programming before ever realizing the functionality
-			of the keyboard would've been a major mistake. Taking advantage of this crate allows for simple asynchronous functionality to be implemented. This
-			functionality lends itself well to the third major tenent of this project: wireless connectivity. The CH32V203G6U6 is not a bluetooth enabled chip,
-			so the BM71 bluetooth module was chosen to enable bluetooth functionality of the device. Furthermore, a system that handles a battery is a necessary
+			<p class="mb-10 text-white ml-10 w-1/2 text-lg">Another core tenent of the Burnboard's design is the use of embedded Rust for the custom
+			firmware. The project exists as a sort of 'full-stack' work, from the hardware to the user design. The existence of the <a target="_blank" rel="noopener noreferrer" class="text-[#e43b26] bg-gray-400 underline hover:text-[#f44b36]" href="https://github.com/ch32-rs/ch32-hal">ch32-hal</a> crate
+			greatly facilitated this decision, as testing the design would've taken far longer without the ability to quickly prototype functioning code. 
+			Taking advantage of this crate allows for simple asynchronous functionality to be implemented. This functionality lends itself well to the third major tenent of this project: wireless connectivity.
+			</p>
+			<p class="mb-10 text-white ml-10 w-1/2 text-lg">
+			The CH32V203G6U6 is not a bluetooth enabled chip, so the Microchip Technology <a target="_blank" rel="noopener noreferrer" class="underline bg-gray-400 text-[#eb271f] hover:text-[#dd2823]" href="https://www.microchip.com/en-us/product/BM71">BM71</a> bluetooth module was chosen to enable bluetooth functionality of the device. Furthermore, a system that handles a battery is a necessary
 			feature of the project. The BM71 can communicate via the Universal Asynchronous Receiver/Transmitter, which the CH32V203 is capable of.
 			</p>
 			<p class="text-white ml-10 w-1/2 text-lg">
 			The key points are summarized below:
 			</p>
-			<ul class="list-inside list-disc text-white ml-10 text-xl">
-				<li>CH32V203G6U6 Microcontroller</li>
-				<li></li>
+			<ul class="list-inside list-disc text-white ml-10 text-xl mb-10">
+				<li>CH32V203G6U6 RISC-V Microcontroller Programmed via Serial Wire Debugger (SWD)</li>
+				<li>Rust Firmware using Embassy and the ch32-hal crate</li>
+				<li>Custom Case + Keycaps</li>
+				<li>Bluetooth Connectivity via BM71 communicated with via UART</li>
 			</ul>
-		</div>
-
-	
+		</div>	
 	</div>
 </div>
+<!-- Schematic Section -->
+<div class="flex flex-col h-screen bg-gradient-to-tl from-orange-500 to-cyan-500">
+	<!-- Header -->
+	<div class="sticky top-0 z-10 shadow-lg">
+		<div class="flex shrink-0 bg-white h-fit min-w-48 shadow-xl p-6">
+			<div class="shadow-lg h-fit bg-fixed bg-contain rounded-lg border-orange-200 text-gray-100 text-lg sm:text-3xl static p-1" style="background-image: url(/static/images/BurnboardBackground.jpg)">
+				<h1 class="hover:text-orange-500 transition-colors ease-in-out duration-800 select-none bg-black bg-blend-multiply p-1">Burnboard</h1>
+			</div>
+			<h1 class="select-none text-gray-700 text-lg sm:text-3xl py-1.5 px-3 translate-y-0.5">:</h1>
+			<h1 class="shrink-0 select-none text-gray-700 text-lg sm:text-3xl py-1.5 px-1 translate-y-0.5">Schematic</h1>
+		</div>
+	</div>

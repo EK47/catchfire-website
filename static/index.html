@@ -10,6 +10,8 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link href="./style/output.css" rel="stylesheet">
 	<script src="https://unpkg.com/htmx.org@2.0.4"></script>
 
@@ -19,15 +21,17 @@
 <div class="flex-1">
 	<!-- Status bar -->
 	<div class="p-6 max-w-m mx-auto bg-neutral-100 shadow-lg flex items-center z-50">
-		<div class="shrink-0 object-contain w-[8rem]">
-			<img class="ease-out duration-1000 size-28 hover:rotate-2" src="/static/images/CatchfireLight.png"></img>
-		</div>
-		<div class="max-w-m flex-1 shrink-0">
-			<div class="select-none text-3xl shrink-0">Welcome to <span class="text-orange-400">Catchfire</span> Electronics</div>
-			<p class="select-none">Home of quality engineering</p>
+		<div class="max-w-m mr-auto flex items-center justify-center">	
+			<div class="shrink w-auto max-w-[16rem] aspect-square m-2">
+				<img class="object-cover ease-out duration-1000 sm:size-28 hover:rotate-2" src="/static/images/CatchfireLight.png"></img>
+			</div>
+			<div class="max-w-m flex-1 shrink text-center sm:text-left mr-6 hidden sm:block">
+				<div class="select-none text-3xl">Welcome to <span class="text-orange-400">Catchfire</span> Electronics</div>
+				<p class="select-none">Home of quality engineering</p>
+			</div>
 		</div>
 
-		<div class="justify-right flex gap-4 text-2xl">
+		<div class="shrink-0 justify-right grid sm:flex gap-4 text-2xl">
 			<button class="shadow hover:shadow-md rounded-lg p-2 bg-neutral-200 ease-out duration-500 hover:bg-amber-300" hx-target="#body-content" hx-get="/home">Home</button>
 			<button class="shadow hover:shadow-md rounded-lg p-2 bg-neutral-200 ease-out duration-500 hover:bg-amber-300" hx-target="#body-content" hx-get="/keyboard">Keyboards</button>
 			<button class="shadow hover:shadow-md rounded-lg p-2 bg-neutral-200 ease-out duration-500 hover:bg-amber-300" hx-target="#body-content" hx-get="/radio">Radio</button>
@@ -55,7 +59,7 @@
 
 	</div>
 	</div>
-		<h1 class="select-none text-center py-36 text-5xl align-center">Relax and hang out, or look around using the toolbar</h1>
+		<h1 class="select-none text-center py-36 text-xl sm:text-5xl align-center">Relax and hang out, or look around using the toolbar</h1>
 	</div>
 
 	<!-- Footer content -->

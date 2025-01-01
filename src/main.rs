@@ -44,14 +44,14 @@ async fn index(_req: HttpRequest) -> impl Responder {
 async fn main() -> std::io::Result<()> {
     HttpServer::new(|| {
         App::new()
-            .service(Files::new("/style/input.css", "./style/input.css").show_files_listing())
-            .service(Files::new("/static", "./static").show_files_listing())
-            .service(web::resource("/").to(index))
             .service(home)
             .service(keyboard)
             .service(radio)
             .service(software)
             .service(theory)
+            .service(web::resource("/").to(index))
+            .service(Files::new("/", "./../style/output.css").show_files_listing())
+            .service(Files::new("/", "./../static/images/").show_files_listing())
     })
         .bind(("127.0.0.1", 8086))?
         .run()
