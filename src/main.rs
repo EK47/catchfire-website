@@ -34,11 +34,19 @@ async fn theory(_req: HttpRequest) -> impl Responder {
     actix_web::HttpResponse::Ok().content_type("text/html").body(content)
 }
 
+#[get("/contact")]
+async fn contact(_req: HttpRequest) -> impl Responder {
+    let content = fs::read_to_string("static/contact.html")
+        .unwrap_or_else(|_| "<h1>404: File Not Found</h1>".to_string());
+    actix_web::HttpResponse::Ok().content_type("text/html").body(content)
+}
+
 async fn index(_req: HttpRequest) -> impl Responder {
     let content = fs::read_to_string("static/index.html")
         .unwrap_or_else(|_| "<h1>404: File Not Found</h1>".to_string());
     actix_web::HttpResponse::Ok().content_type("text/html").body(content)
 }
+
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
@@ -49,11 +57,12 @@ async fn main() -> std::io::Result<()> {
             .service(radio)
             .service(software)
             .service(theory)
+            .service(contact)
             .service(web::resource("/").to(index))
             .service(Files::new("/", "./../style/output.css").show_files_listing())
             .service(Files::new("/", "./../static/images/").show_files_listing())
     })
-        .bind(("127.0.0.1", 8086))?
+        .bind(("0.0.0.0", 10000))?
         .run()
         .await
 }
